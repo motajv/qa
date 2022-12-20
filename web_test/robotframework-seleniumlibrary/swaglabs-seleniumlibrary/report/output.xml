@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20221219 16:39:40.289" rpa="false" schemaversion="3">
+<suite id="s1" name="Tests" source="C:\Users\joao.mota\OneDrive - COMPASSO TECNOLOGIA LTDA\Documentos\Compass UOL\QA\Automação de Testes\robotframework-seleniumlibrary\swaglabs-seleniumlibrary\tests.robot">
+<test id="s1-t1" name="Cenário 2.1: Fluxo de Compra" line="23">
+<kw name="Acessar Site" library="resource" type="SETUP">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20221219 16:39:40.463" level="INFO">Opening browser 'googlechrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20221219 16:39:40.463" endtime="20221219 16:39:42.341"/>
+</kw>
+<status status="PASS" starttime="20221219 16:39:40.462" endtime="20221219 16:39:42.343"/>
+</kw>
+<kw name="Login Usuario Padrao" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>user-name</arg>
+<arg>standard_user</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221219 16:39:42.345" level="INFO">Typing text 'standard_user' into text field 'user-name'.</msg>
+<status status="PASS" starttime="20221219 16:39:42.344" endtime="20221219 16:39:42.433"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>password</arg>
+<arg>secret_sauce</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221219 16:39:42.433" level="INFO">Typing text 'secret_sauce' into text field 'password'.</msg>
+<status status="PASS" starttime="20221219 16:39:42.433" endtime="20221219 16:39:42.507"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221219 16:39:42.508" level="INFO">Clicking button 'login-button'.</msg>
+<status status="PASS" starttime="20221219 16:39:42.507" endtime="20221219 16:39:42.578"/>
+</kw>
+<status status="PASS" starttime="20221219 16:39:42.344" endtime="20221219 16:39:42.578"/>
+</kw>
+<kw name="Validar Login Efetuado com Sucesso" library="resource">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>//span[@class='title'][contains(.,'Products')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20221219 16:39:42.589" level="INFO">Current page contains element '//span[@class='title'][contains(.,'Products')]'.</msg>
+<status status="PASS" starttime="20221219 16:39:42.579" endtime="20221219 16:39:42.589"/>
+</kw>
+<status status="PASS" starttime="20221219 16:39:42.578" endtime="20221219 16:39:42.589"/>
+</kw>
+<kw name="Selecionar &quot;Sauce Labs Fleece Jacket&quot; e adicionar ao carrinho" library="resource" sourcename="Selecionar &quot;${PRODUTO}&quot; e adicionar ao carrinho">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//div[@class='inventory_item_name'][contains(.,'${PRODUTO}')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221219 16:39:42.592" level="INFO">Clicking element '//div[@class='inventory_item_name'][contains(.,'Sauce Labs Fleece Jacket')]'.</msg>
+<status status="PASS" starttime="20221219 16:39:42.591" endtime="20221219 16:39:42.637"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//button[@class='btn btn_primary btn_small btn_inventory'][contains(.,'Add to cart')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221219 16:39:42.638" level="INFO">Clicking element '//button[@class='btn btn_primary btn_small btn_inventory'][contains(.,'Add to cart')]'.</msg>
+<status status="PASS" starttime="20221219 16:39:42.637" endtime="20221219 16:39:42.671"/>
+</kw>
+<status status="PASS" starttime="20221219 16:39:42.590" endtime="20221219 16:39:42.671"/>
+</kw>
+<kw name="Abrir Carrinho e Verificar Produtos" library="resource">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>//a[@class='shopping_cart_link'][contains(.,'1')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221219 16:39:42.673" level="INFO">Clicking element '//a[@class='shopping_cart_link'][contains(.,'1')]'.</msg>
+<status status="PASS" starttime="20221219 16:39:42.672" endtime="20221219 16:39:42.707"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>checkout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20221219 16:39:42.708" level="INFO">Clicking element 'checkout'.</msg>
+<status status="PASS" starttime="20221219 16:39:42.707" endtime="20221219 16:39:42.745"/>
+</kw>
+<status status="PASS" starttime="20221219 16:39:42.671" endtime="20221219 16:39:42.745"/>
+</kw>
+<kw name="Finalizar Compra" library="resource">
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>first-name</arg>
+<arg>João</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221219 16:39:42.747" level="INFO">Typing text 'João' into text field 'first-name'.</msg>
+<status status="PASS" starttime="20221219 16:39:42.746" endtime="20221219 16:39:42.827"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>last-name</arg>
+<arg>Mota</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221219 16:39:42.827" level="INFO">Typing text 'Mota' into text field 'last-name'.</msg>
+<status status="PASS" starttime="20221219 16:39:42.827" endtime="20221219 16:39:42.894"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>postal-code</arg>
+<arg>99999999</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20221219 16:39:42.895" level="INFO">Typing text '99999999' into text field 'postal-code'.</msg>
+<status status="PASS" starttime="20221219 16:39:42.894" endtime="20221219 16:39:42.967"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221219 16:39:42.968" level="INFO">Clicking button 'continue'.</msg>
+<status status="PASS" starttime="20221219 16:39:42.968" endtime="20221219 16:39:43.037"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>finish</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20221219 16:39:43.039" level="INFO">Clicking button 'finish'.</msg>
+<status status="PASS" starttime="20221219 16:39:43.038" endtime="20221219 16:39:43.087"/>
+</kw>
+<status status="PASS" starttime="20221219 16:39:42.746" endtime="20221219 16:39:43.087"/>
+</kw>
+<kw name="Fechar Navegador" library="resource" type="TEARDOWN">
+<kw name="Sleep" library="BuiltIn">
+<arg>5s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20221219 16:39:48.089" level="INFO">Slept 5 seconds</msg>
+<status status="PASS" starttime="20221219 16:39:43.089" endtime="20221219 16:39:48.089"/>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20221219 16:39:48.234" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20221219 16:39:48.089" endtime="20221219 16:39:48.234"/>
+</kw>
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20221219 16:39:48.235" endtime="20221219 16:39:50.433"/>
+</kw>
+<status status="PASS" starttime="20221219 16:39:43.088" endtime="20221219 16:39:50.433"/>
+</kw>
+<tag>CT2.1</tag>
+<status status="PASS" starttime="20221219 16:39:40.462" endtime="20221219 16:39:50.434"/>
+</test>
+<doc>Esta suíte testa algumas das principais funcionalidades do site Swaglabs.</doc>
+<status status="PASS" starttime="20221219 16:39:40.291" endtime="20221219 16:39:50.437"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="1" fail="0" skip="0">CT2.1</stat>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Tests">Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.1 (Python 3.11.1 on win32)" generated="20221218 10:07:31.219" rpa="false" schemaversion="3">
+<suite id="s1" name="Robotframework-Browser" source="C:\Users\joao.mota\OneDrive - COMPASSO TECNOLOGIA LTDA\Documentos\Compass UOL\QA\Automação de Testes\robotframework-browser\robotframework-browser.robot">
+<test id="s1-t1" name="Exemplo com a library Browser" line="6">
+<kw name="Abrindo uma tab no navegador no site">
+<arg>http://www.google.com.br</arg>
+<kw name="New Browser">
+<arg>headless=False</arg>
+<msg timestamp="20221218 10:07:31.241" level="FAIL">No keyword with name 'New Browser' found.</msg>
+<status status="FAIL" starttime="20221218 10:07:31.241" endtime="20221218 10:07:31.241"/>
+</kw>
+<kw name="New Context">
+<arg>recordVideo={'dir': '${OUTPUT_DIR}/video'}</arg>
+<status status="NOT RUN" starttime="20221218 10:07:31.242" endtime="20221218 10:07:31.242"/>
+</kw>
+<kw name="New Page">
+<arg>url=${url}</arg>
+<status status="NOT RUN" starttime="20221218 10:07:31.243" endtime="20221218 10:07:31.243"/>
+</kw>
+<status status="FAIL" starttime="20221218 10:07:31.240" endtime="20221218 10:07:31.243"/>
+</kw>
+<kw name="Fazer pesquisa com a frase">
+<arg>robot framework</arg>
+<status status="NOT RUN" starttime="20221218 10:07:31.243" endtime="20221218 10:07:31.243"/>
+</kw>
+<kw name="Verificar se aparece o header do Robot Framework">
+<status status="NOT RUN" starttime="20221218 10:07:31.243" endtime="20221218 10:07:31.243"/>
+</kw>
+<status status="FAIL" starttime="20221218 10:07:31.240" endtime="20221218 10:07:31.244">No keyword with name 'New Browser' found.</status>
+</test>
+<status status="FAIL" starttime="20221218 10:07:31.221" endtime="20221218 10:07:31.245"/>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" skip="0" id="s1" name="Robotframework-Browser">Robotframework-Browser</stat>
+</suite>
+</statistics>
+<errors>
+<msg timestamp="20221218 10:07:31.237" level="ERROR">Error in file 'C:\Users\joao.mota\OneDrive - COMPASSO TECNOLOGIA LTDA\Documentos\Compass UOL\QA\Automação de Testes\robotframework-browser\robotframework-browser.robot' on line 2: Importing library 'Browser' failed: ModuleNotFoundError: No module named 'Browser'
+Traceback (most recent call last):
+  None
+PYTHONPATH:
+  C:\Users\joao.mota\AppData\Local\Programs\Python\Python311\Scripts\robot.exe
+  C:\Users\joao.mota\AppData\Local\Programs\Python\Python311\python311.zip
+  C:\Users\joao.mota\AppData\Local\Programs\Python\Python311\Lib
+  C:\Users\joao.mota\AppData\Local\Programs\Python\Python311\DLLs
+  C:\Users\joao.mota\AppData\Local\Programs\Python\Python311
+  C:\Users\joao.mota\AppData\Local\Programs\Python\Python311\Lib\site-packages</msg>
+</errors>
+</robot>
